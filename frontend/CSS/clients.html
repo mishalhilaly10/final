@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العملاء - الفاتورة السريعة</title>
+    <link rel="stylesheet" href="dashboard-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-layout">
+        
+        <aside class="sidebar">
+            <div class="logo">الفاتورة السريعة</div>
+            <nav class="main-nav">
+                <a href="dashboard.html" class="nav-item">
+                    <span class="nav-text">الرئيسية</span>
+                </a>
+                <a href="invoices.html" class="nav-item"> 
+                    <span class="nav-text">الفواتير</span>
+                </a>
+                <a href="clients.html" class="nav-item active"> <span class="nav-text">العملاء</span>
+                </a>
+                <a href="settings.html" class="nav-item">
+                    <span class="nav-text">الإعدادات</span>
+                </a>
+            </nav>
+            <div class="user-profile">
+                <a href="login.html" class="logout-btn">تسجيل الخروج</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="app-header">
+                <h1>العملاء</h1>
+                <a href="add-client.html" class="btn btn-primary">+ إضافة عميل جديد</a>
+            </header>
+
+            <section class="content-area">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>اسم العميل</th>
+                            <th>البريد الإلكتروني</th>
+                            <th>الهاتف</th>
+                            <th>إجمالي الفواتير (مدفوع)</th>
+                            <th>إجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>شركة الأمل للتجارة</td>
+                            <td>contact@alamal.com</td>
+                            <td>+966 50 123 4567</td>
+                            <td>$500.00</td>
+                            <td>
+                                <a href="#" class="action-btn">تعديل</a>
+                                <a href="#" class="action-btn">حذف</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>أحمد محمد (مستقل)</td>
+                            <td>ahmed@freelance.com</td>
+                            <td>+966 55 987 6543</td>
+                            <td>$0.00</td>
+                            <td>
+                                <a href="#" class="action-btn">تعديل</a>
+                                <a href="#" class="action-btn">حذف</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>مؤسسة البناء الحديث</td>
+                            <td>info@modern.sa</td>
+                            <td>+966 53 456 7890</td>
+                            <td>$0.00</td>
+                            <td>
+                                <a href="#" class="action-btn">تعديل</a>
+                                <a href="#" class="action-btn">حذف</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

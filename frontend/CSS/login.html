@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - الفاتورة السريعة</title>
+    <link rel="stylesheet" href="login-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="auth-container">
+        <div class="auth-header">
+            <h2 class="logo"><a href="index.html">الفاتورة السريعة</a></h2>
+        </div>
+
+        <div class="auth-tabs">
+            <button class="tab-link active" data-form="login">تسجيل الدخول</button>
+            <button class="tab-link" data-form="register">إنشاء حساب جديد</button>
+        </div>
+
+        <div class="auth-body">
+            
+            <form id="login" class="auth-form active">
+                <div class="form-group">
+                    <label for="login-email">البريد الإلكتروني</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">كلمة المرور</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="remember"> تذكرني
+                    </label>
+                    <a href="#" class="forgot-link">نسيت كلمة المرور؟</a>
+                </div>
+                <button type="submit" class="btn btn-primary">تسجيل الدخول</button>
+            </form>
+
+            <form id="register" class="auth-form">
+                <div class="form-group">
+                    <label for="reg-name">الاسم الكامل</label>
+                    <input type="text" id="reg-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">البريد الإلكتروني</label>
+                    <input type="email" id="reg-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">كلمة المرور</label>
+                    <input type="password" id="reg-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">إنشاء حسابي المجاني</button>
+                <p class="form-terms">
+                    بالنقر على "إنشاء حساب"، أنت توافق على
+                    <a href="#">شروط الخدمة</a> و <a href="#">سياسة الخصوصية</a>.
+                </p>
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+        const tabs = document.querySelectorAll('.tab-link');
+        const forms = document.querySelectorAll('.auth-form');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(item => item.classList.remove('active'));
+                forms.forEach(form => form.classList.remove('active'));
+
+                const formId = tab.getAttribute('data-form');
+                const targetForm = document.getElementById(formId);
+
+                tab.classList.add('active');
+                targetForm.classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

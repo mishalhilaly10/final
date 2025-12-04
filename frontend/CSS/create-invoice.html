@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء فاتورة جديدة - الفاتورة السريعة</title>
+    <link rel="stylesheet" href="dashboard-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-layout">
+        
+        <aside class="sidebar">
+            <div class="logo">الفاتورة السريعة</div>
+            <nav class="main-nav">
+                <a href="dashboard.html" class="nav-item">
+                    <span class="nav-text">الرئيسية</span>
+                </a>
+                <a href="invoices.html" class="nav-item active"> <span class="nav-text">الفواتير</span>
+                </a>
+                <a href="clients.html" class="nav-item">
+                    <span class="nav-text">العملاء</span>
+                </a>
+                <a href="settings.html" class="nav-item">
+                    <span class="nav-text">الإعدادات</span>
+                </a>
+            </nav>
+            <div class="user-profile">
+                <a href="login.html" class="logout-btn">تسجيل الخروج</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="app-header">
+                <h1>إنشاء فاتورة جديدة</h1>
+                </header>
+
+            <section class="content-area">
+                <form class="invoice-creator-layout">
+                    
+                    <div class="invoice-main-form">
+                        <div class="invoice-card">
+                            <div class="invoice-card-header">
+                                <h3>العميل</h3>
+                            </div>
+                            <div class="invoice-card-body">
+                                <div class="form-group">
+                                    <label for="client">اختيار عميل</label>
+                                    <select id="client">
+                                        <option value="">-- اختر من قائمة العملاء --</option>
+                                        <option value="1">شركة الأمل للتجارة</option>
+                                        <option value="2">أحمد محمد (مستقل)</option>
+                                    </select>
+                                    <small style="margin-top: 10px; display: block;">
+                                        أو <a href="add-client.html">أضف عميل جديد</a>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="invoice-card" style="margin-top: 30px;">
+                            <div class="invoice-card-header">
+                                <h3>بنود الفاتورة</h3>
+                            </div>
+                            <div class="invoice-card-body">
+                                <table class="invoice-items-table">
+                                    <thead>
+                                        <tr>
+                                            <th>الوصف</th>
+                                            <th style="width: 80px;">الكمية</th>
+                                            <th style="width: 120px;">السعر</th>
+                                            <th style="width: 120px;">الإجمالي</th>
+                                            <th style="width: 50px;"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="item-row">
+                                            <td><input type="text" placeholder="مثال: تصميم شعار"></td>
+                                            <td><input type="number" value="1"></td>
+                                            <td><input type="number" placeholder="0.00"></td>
+                                            <td class="item-total">$0.00</td>
+                                            <td><button class="remove-item-btn">&times;</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <button type="button" class="add-item-btn">+ إضافة بند جديد</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="invoice-sidebar">
+                        <div class="invoice-card actions-card">
+                            <div class="invoice-card-body">
+                                <button type="submit" class="btn btn-primary">إرسال الفاتورة</button>
+                                <button type="button" class="btn btn-secondary">حفظ كمسودة</button>
+                            </div>
+                        </div>
+
+                        <div class="invoice-card" style="margin-top: 30px;">
+                            <div class="invoice-card-header">
+                                <h3>تفاصيل</h3>
+                            </div>
+                            <div class="invoice-card-body">
+                                <div class="form-group">
+                                    <label for="invoice-id">رقم الفاتورة</label>
+                                    <input type="text" id="invoice-id" value="#2025-004">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="issue-date">تاريخ الإصدار</label>
+                                        <input type="date" id="issue-date">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="due-date">تاريخ الاستحقاق</label>
+                                        <input type="date" id="due-date">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="invoice-card" style="margin-top: 30px;">
+                            <div class="invoice-card-body">
+                                <ul class="invoice-summary">
+                                    <li><span>المجموع الفرعي</span> <span>$0.00</span></li>
+                                    <li><span>الضريبة (15%)</span> <span>$0.00</span></li>
+                                    <li><strong>المجموع الكلي</strong> <strong>$0.00</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </aside>
+
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
